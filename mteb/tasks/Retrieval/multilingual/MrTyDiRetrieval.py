@@ -104,10 +104,7 @@ class MrTyDiRetrieval(MultilingualTask, AbsTaskRetrieval):
                     row["positive_passages"][0]["docid"]: 1
                 }
 
-            lang_corpus = {
-                row["docid"]: {"title": row["title"], "text": row["text"]}
-                for row in corpus_list
-            }
+            lang_corpus = {row["docid"]: {"text": row["text"]} for row in corpus_list}
 
             self.queries[lang] = {_EVAL_SPLIT: lang_queries}
             self.corpus[lang] = {_EVAL_SPLIT: lang_corpus}
