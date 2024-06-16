@@ -5,7 +5,7 @@ import datasets
 from mteb.abstasks.AbsTaskRetrieval import AbsTaskRetrieval
 from mteb.abstasks.TaskMetadata import TaskMetadata
 
-_EVAL_SPLIT = "dev"
+_EVAL_SPLIT = "validation"
 
 
 class JAQKETRetrieval(AbsTaskRetrieval):
